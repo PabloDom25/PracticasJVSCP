@@ -3,18 +3,16 @@
 <head> <!-- titulos, contenidos  -->
     <meta charset="UTF-8"> <!-- etiqueta que define el diccionario de carácteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- esta etiqueta ayuda a ajustar los objetos según la dimensión de la pantalla  -->
-    <link rel="stylesheet" href="css/style.css">
     <title>Document</title> <!-- titulo de la pagina, se presenta en la pestaña del navegador web -->
 </head>
 <body> <!-- contenido de la página  -->
     <div id="container" style="display: flex; gap: 10px;">
-        <div id="personaje1" class="contenedor-flx1">
-            <img  src="img/spiderman.webp" alt="spiderman" srcset="" width="250px"> <!-- Define multiples imagenes para diferentes resoluciones, tamaños de pantalla.-->
+        <div id="profileInfo" style="background-color: rgb(199, 138, 240); flex: 1; padding-left:10px;">
             <h1 style="color: aqua;">Perfil</h1> <!-- tipo de color -->
-            
-            <button onclick="alert('soy spiderman conocido como el hombre araña es un superheroe de comic estadounidense publicado por marvel comics. Fue creado por el escritor Stan lee y el ilustrador Steve Ditko.');"> Ver más </button>
+            <img  src="./avatar.jpg" alt="avatar" srcset="" width="250px"> <!-- Define multiples imagenes para diferentes resoluciones, tamaños de pantalla.-->
+            <p>Hola soy Pablo, una persona responsable, trabajadora.  </p>
         </div>
-        <div id="personaje2" style="background-color:rgb(154, 185, 224); flex: 1; padding-left:10px;">
+        <div id="relatedInfo" style="background-color:rgb(154, 185, 224); flex: 1; padding-left:10px;">
             <h1>Experiencia Laboral</h1>
             <h3>2025 - 2026 "Creación de imagenes con Canva"</h3>
             <p>Lugar: Pilares Pelón Osuna</p>
@@ -47,11 +45,7 @@
                 <li>Creación de videojuegos con Scratch</li>
             </ul>
         </div>
-        <div id="personaje3" style="background-color:bisque;flex: 1; padding-left:10px;">
-            <h3>Proyectos de scrath. Descripcion: Crear un videojuego</h3> 
-            <iframe src="https://scratch.mit.edu/projects/1140932216/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-        <div id="personaje4" style="background-color:bisque;flex: 1; padding-left:10px;">
+        <div id="projectInfo" style="background-color:bisque;flex: 1; padding-left:10px;">
             <h3>Proyectos de scrath. Descripcion: Crear un videojuego</h3> 
             <iframe src="https://scratch.mit.edu/projects/1140932216/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
