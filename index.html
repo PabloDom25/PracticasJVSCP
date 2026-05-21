@@ -7,61 +7,41 @@
     <title>Document</title> <!-- titulo de la pagina, se presenta en la pestaña del navegador web -->
 </head>
 <body> <!-- contenido de la página  -->
+    <div id="headerMenu" style="margin-bottom: 10px; background-color:red;">Bienvenido</div>
     <div id="container" style="display: flex; gap: 10px;">
-        <div id="personaje1" class="contenedor-flx1">
-            <img  src="img/spiderman.webp" alt="spiderman" srcset="" width="250px"> <!-- Define multiples imagenes para diferentes resoluciones, tamaños de pantalla.-->
-            <h1 style="color: aqua;">Perfil</h1> <!-- tipo de color -->
+        <div id="personaje1" class="contenedor-flx1" style="height: 800px;">
+            <div style="height: 200px;overflow: clip;position: relative;left: -5px;"><img src="img/spiderman.webp" alt="spiderman" srcset="" style="width: 450px"></div>
+            <img  src="img/spiderman.webp" alt="spiderman" srcset="" width="150px" style="border-radius: 100px;"> <!-- Define multiples imagenes para diferentes resoluciones, tamaños de pantalla.-->
+            <h1 style="color: aqua;"></h1> <!-- tipo de color -->
+            <h3>Spiderman</h3>
+            <p>conocido como el hombre araña es un superheroe de comic estadounidense publicado por marvel comics. Fue creado por el escritor Stan lee y el ilustrador Steve Ditko.</p>
             
-            <button onclick="alert('soy spiderman conocido como el hombre araña es un superheroe de comic estadounidense publicado por marvel comics. Fue creado por el escritor Stan lee y el ilustrador Steve Ditko.');"> Ver más </button>
+            <button onclick="alert('soy peter parker ');"> Ver más </button>
+        </div>           
+        <div id="personaje2" style="background-color:rgb(154, 185, 224); flex: 1; padding-left:10px; text-align: center;">
+            <div style="height: 200px;overflow: clip;position: relative;left: -5px;"><img src="img/spiderman.webp" alt="spiderman" srcset="" style="width: 450px;"></div>
+            <img  src="img/tierra1.jpg" alt="tierra1" srcset="" width="250px" style="border-radius: 100px;">
+            <h3>Mujer maravilla</h3>
+            <p>Mejor conocida como la mujer maravilla y ayudando a los que me necesiten.</p>
+            <button onclick="alert('soy diana prince');"> Ver más </button>
         </div>
-             
-        <div id="mujer maravilla" style="background-color:rgb(154, 185, 224); flex: 1; padding-left:10px;">
-            <img  src="img/tierra1.jpg" alt="tierra1" srcset="" width="250px">
-            <button onclick="alert('soy diana prince mejor conocida como la mujer maravilla y ayudando a los que me necesiten.');"> Ver más </button>
-            <h1>Experiencia Laboral</h1>
-            <h3>2025 - 2026 "Creación de imagenes con Canva"</h3>
-            <p>Lugar: Pilares Pelón Osuna</p>
-            <p> descriptivo diseñe un logo y nombre de empresa. Tambien hicimos una portada de revista. </p>             
+        <div id="personaje3" style="background-color:bisque;flex: 1; padding-left:10px; text-align: center;">
+            <div style="height: 200px;overflow: clip;position: relative;left: -5px; z-index: 0;"><img src="img/spiderman.webp" alt="spiderman" srcset="" style="width: 450px;"></div>
+            <img  src="img/supergirl.webp" alt="supergirl" srcset="" width="250px" style="border-radius: 100px; z-index: 5;">
+            <h3>Supergirl </h3> 
+            <p>soy supergirl y pelando contra el mal.</p>
+            <button onclick="alert('soy kara danvers .');"> Ver más </button>
             
-            <h1>Constancias y/o Certificaciones</h1>
-            <h3>2025- 2026 Manejo de Github </h3>
-            <p>Lugar: Pilares Pelón Osuna</p>
-            <p>Descriptivo: que es y conocer  cada herramienta. Practicas de su uso. </p>        
-
-            <h3>Diciembre 2025 "Hoja de calculo 2"</h3>
-            <p>Lugar: Pilares Pelón Osuna</p>
-            <p> descriptivo diseñe un logo y nombre de empresa. Tambien hicimos una portada de revista. </p>    
-
-            <h4>Habilidades Suaves</h4>
-            <ul>
-                <li>Inglés: B1</li>
-                <li>Trabajo en equipo</li>            
-                <li>Creativo</li>            
-                <li>Colaborativo</li>                        
-                <li>Comunicación de ideas</li>                        
-            </ul>
-            <h4>Habilidades Fuertes</h4>
-            <ul>
-                <li>Diseño de logo o imagen en Canva y Photoshop</li>
-                <li>Creación de videos IA con ---</li>
-                <li>Ofimática: Excel, PowerPoint, Word</li>
-                <li>web con python</li>
-                <li>Interfaz de usuario con java</li>
-                <li>Creación de videojuegos con Scratch</li>
-            </ul>
         </div>
-        <div id="personaje3" style="background-color:bisque;flex: 1; padding-left:10px;">
-            <img  src="img/supergirl.webp" alt="supergirl" srcset="" width="250px">
-            <button onclick="alert('soy kara danvers mejor conocida como supergirl y ayudando a los que me necesiten.');"> Ver más </button>
-            <h3>Proyectos de scrath. Descripcion: Crear un videojuego</h3> 
-            <iframe src="https://scratch.mit.edu/projects/1140932216/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-        <div id="personaje4" style="background-color:bisque;flex: 1; padding-left:10px;">
-            <img  src="img/max_steel.jpg" alt="max_steel" srcset="" width="250px">
-            <button onclick="alert('soy max_steel peleando contra el mal y defendiendo la tierra, junto con mis amigos .');"> Ver más </button>
-            <h3>Proyectos de scrath. Descripcion: Crear un videojuego</h3> 
-            <iframe src="https://scratch.mit.edu/projects/1140932216/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        <div id="personaje4" style="background-color:bisque;flex: 1; padding-left:10px; text-align: center;">
+            <div style="height: 200px;overflow: clip;position: relative;left: -5px;"><img src="img/spiderman.webp" alt="spiderman" srcset="" style="width: 450px;"></div>
+            <img  src="img/max_steel.jpg" alt="max_steel" srcset="" width="150px" style="border-radius: 100px;">
+            <h3>max steel</h3>
+            <p> peleando contra el mal y defendiendo la tierra, junto con mis amigos</p>
+            <button onclick="alert('soy max steel  .');"> Ver más </button> 
+           
         </div>
     </div>
+    <div id="footerInfo" style="text-align: center; margin-top: 10px; background-color: darkorange;">Pablo's page</div>
 </body>
 </html>
