@@ -1,7 +1,19 @@
-.contenedor-flx1{
+.contenedor-flx1{ /*class*/
     background-color: rgb(199, 138, 240); 
     flex: 1; 
     padding-left:10px;
     /* align-content: center;  */
     text-align: center;
 } 
+
+#container{ /*id*/
+  display: flex; 
+  gap: 10px;
+  flex-direction: row;
+}
+
+@media(max-width:480px){ /*media query*/
+    #container{
+        flex-direction: column;
+    }
+}
