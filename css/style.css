@@ -17,3 +17,16 @@
         flex-direction: column;
     }
 }
+
+img {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.contenedor-playeras {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
