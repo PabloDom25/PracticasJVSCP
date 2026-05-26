@@ -19,9 +19,19 @@
 }
 
 img {
-    width: 200px;
-    height: 250px;
+    /* width: 200px; */
+    /* height: 250px; */
     object-fit: contain;
+}
+
+.imagen_principal{
+    width: 600px;
+    height: 800px;
+}
+
+.reelImg {
+    width: 150px;
+    height: 120px;
 }
 
 .contenedor-playeras {
@@ -29,4 +39,62 @@ img {
     align-items: center;
     justify-content: space-around;
     gap: 10px;
+
+}
+
+.boton-transicion {
+    background-color: steelblue;
+    color: beige;
+    padding: 10px  20px;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.5s ease;
+}
+
+.boton-transicion:hover {
+    background-color: #2ecc71;
+}
+
+@keyframes cambioForma {
+    0% {width: 100px; height: 100px; background-color: chocolate;}
+    100% {width: 150px; height: 150px; background-color: cornflowerblue;}
+}
+
+.cuadro-animado {
+    width: 100px;
+    height: 100px;
+    animation: cambioForma 2s infinite alternate;
+}
+
+.banner {
+    overflow: hidden;
+    background: #333;
+    color: cyan;
+    white-space: nowrap;
+}
+
+@keyframes deslizar {
+    from { transform: translateX(100%);}
+    to { transform: translateX(-100%);}
+}
+
+.texto-deslizante {
+    display: inline-block;
+    animation-name: deslizar;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+.animacion avanzada {
+    animation-name: cambioForma;
+    animation-duration: 3s;
+
+    animation-timing-function: ease-in-out;
+
+    animation-direction: alternate-reverse;
+
+    animation-iteration-count: infinite;
 }
