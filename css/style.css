@@ -42,19 +42,21 @@ img {
 
 }
 
-.boton-transicion {
-    background-color: steelblue;
-    color: beige;
+btn-transicion {
+    background-color: blueviolet;
+    color: cadetblue;
     padding: 10px  20px;
     border: none;
     cursor: pointer;
+    /* La magia ocurre aqui: */
+    transition: background-color 0.5 ease;
 
-    transition: background-color 0.5s ease;
 }
 
-.boton-transicion:hover {
-    background-color: #2ecc71;
+.btn-transition:hover {
+    
 }
+
 
 @keyframes cambioForma {
     0% {width: 100px; height: 100px; background-color: chocolate;}
@@ -64,20 +66,23 @@ img {
 .cuadro-animado {
     width: 100px;
     height: 100px;
-    animation: cambioForma 2s infinite alternate;
+    animation: miAnimacion 2s infinite alternate;
+}
+
+@keyframes miAnimacion {
+    0% {transform: scale(1); background-color: #2ecc71; }
+    50% {transform: scale(1); background-color: greenyellow; }
+    100% {transform: scale(1); background-color: blue; }
 }
 
 .banner {
+    width: 100%;
     overflow: hidden;
     background: #333;
     color: cyan;
     white-space: nowrap;
 }
 
-@keyframes deslizar {
-    from { transform: translateX(100%);}
-    to { transform: translateX(-100%);}
-}
 
 .texto-deslizante {
     display: inline-block;
@@ -88,13 +93,17 @@ img {
     animation-delay: 2s;
 }
 
-.animacion avanzada {
-    animation-name: cambioForma;
-    animation-duration: 3s;
+@keyframes deslizar {
+    from { transform: translateX(100%);}
+    to { transform: translateX(-100%);}
+}
+
+
+    .texto-deslizante {
 
     animation-timing-function: ease-in-out;
 
-    animation-direction: alternate-reverse;
+    animation-direction: alternate;
 
-    animation-iteration-count: infinite;
+    
 }
