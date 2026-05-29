@@ -5,9 +5,18 @@ ul li:nth-child(odd){
 button:hover {
     background-color: violet;
     color: tomato;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: violet;
+    color: tomato;
 }
     
-a .icon::before {
+.icon::before {
     content:url(../img/icons8-teléfono.gif) ;
     margin-right: 8px;
     /* content: "\f015"; */
