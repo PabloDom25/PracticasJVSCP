@@ -6,10 +6,13 @@ button:hover {
     background-color: violet;
     color: tomato;
 }
-
-a::before {
-    content: ;
+    
+a .icon::before {
+    content:url(../img/icons8-teléfono.gif) ;
     margin-right: 8px;
+    /* content: "\f015"; */
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
 }
 
 p::first-letter {
