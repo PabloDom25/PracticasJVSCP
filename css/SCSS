@@ -1,0 +1,3 @@
+// Tu archivo personalizado .scss
+$primary: #ff5733; // Cambias el color azul por naranja
+@import "bootstrap/bootstrap";

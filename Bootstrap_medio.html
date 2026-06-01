@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <!--Colummna principal -->
+        <div class="col-md-8">
+        <h3>contenido Principal</h3>
+        <div class="row">
+            <!--Secciones Anidades-->
+            <div class="col-6 bg-light">Sub-seccion A</div>
+            <div class="col-6 bg-secondary text-write">Sub-seccion B</div>
+        </div>
+    </div>
+    <!--Barra Lateral-->
+    <div class="col-md-4">
+      <h3>Sidebar</h3>
+    </div>
+  </div>
+</div>
+    
+</body>
+<button type="button" class="btn btn-primary data-bs-toogle="modal" data-bs-target="#miModal">
+    Abrir Modal
+</button>
+
+<div class="modal fade" id="miModal" tabindex="-1">
+    <div class="modal-dialog">    
+    <div class="modal-content">
+        <div class="modal-header"><h5>Titulo</h5></div>
+        <div class="modal-body">Contenido dinamico aqui.</div>
+    </div>
+   </div>
+  </div>
+
+</html>
