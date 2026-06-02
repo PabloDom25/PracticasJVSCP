@@ -1,0 +1,19 @@
+// scss/styles.scss
+
+// 1. Importar TUS variables (Antes de Bootstrap)
+@use "../bootstrap/scss/bootstrap" as *;
+
+// 2. Importar Bootstrap
+// Ajusta la ruta según dónde tengas la carpeta bootstrap
+// Si la carpeta 'bootstrap' está en el mismo nivel que 'scss', usa ../bootstrap/scss
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables"; // Bootstrap sobrescribe las nuestras si no hay @use, pero como importamos variables antes, esto funciona si usas @use. 
+// NOTA: Con la versión 5.3, Bootstrap prefiere @use. 
+// Si tu compilador es antiguo, usa @import.
+// 
+// Opción recomendada para compatibilidad total:
+// @import "../bootstrap/scss/bootstrap";
+@import "./variables";
+@import "./custom";
+
+// 3. Importar estilos personalizados

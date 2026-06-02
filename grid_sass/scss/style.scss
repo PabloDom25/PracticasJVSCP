@@ -1,0 +1,149 @@
+// Variables globales
+$color-primary: #2c3e50;
+$color-secondary: #34495e;
+$color-accent: #ecf0f1;
+$color-text: #333;
+$gap-base: 15px;
+$border-radius: 5px;
+
+// Reset básico
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+// --- GRID PRINCIPAL (NIVEL 1) ---
+.main-container {
+  display: grid;
+  // Anidamiento de columnas y filas
+  grid-template-columns: 250px 1fr 250px;
+  grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "sidebar-left content sidebar-right"
+    "footer footer footer";
+  gap: $gap-base;
+  max-width: 1400px;
+  margin: 20px auto;
+  min-height: 100vh;
+  background: #fff;
+  padding: 20px;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  // --- HEADER ---
+  header {
+    grid-area: header;
+    background-color: $color-primary;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: $border-radius;
+    
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  // --- NAV ---
+  nav {
+    grid-area: nav;
+    background-color: $color-secondary;
+    color: white;
+    padding: 15px;
+    border-radius: $border-radius;
+    
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // --- SIDEBAR LEFT ---
+  .sidebar-left {
+    grid-area: sidebar-left;
+    background-color: $color-accent;
+    padding: 20px;
+    border-radius: $border-radius;
+  }
+
+  // --- MAIN CONTENT (GRID ANIDADO) ---
+  .main-content {
+    grid-area: content;
+    // Grid anidado
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    
+    // Tarjetas dentro del grid anidado
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      
+      h3 {
+        margin-bottom: 10px;
+        color: darken($color-primary, 10%); // Usando función nativa de SCSS
+      }
+    }
+  }
+
+  // --- SIDEBAR RIGHT ---
+  .sidebar-right {
+    grid-area: sidebar-right;
+    background-color: $color-accent;
+    padding: 20px;
+    border-radius: $border-radius;
+  }
+
+  // --- FOOTER ---
+  footer {
+    grid-area: footer;
+    background-color: $color-primary;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: $border-radius;
+  }
+}
+
+// --- MEDIA QUERIES (Anidados en SCSS) ---
+@media (max-width: 900px) {
+  .main-container {
+    // Cambiar a un solo column
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "nav"
+      "sidebar-left"
+      "content"
+      "sidebar-right"
+      "footer";
+    
+    .sidebar-left,
+    .sidebar-right {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+}
